@@ -204,14 +204,16 @@ d3.csv('data/rd_dataset1.csv',function(error,data){
           .attr('cx',x(1))
           .attr('cy',y(1))
           .attr('r',5)
-          .attr('stroke','red')
-          .attr('fill',"none");
+          .attr('stroke','orange')
+          .attr('fill',"orange")
+          .attr('opacity',0.7);
           
     canvas.append('text')
           .attr("id",'start-reminder')
           .attr('x',x(1))
           .attr('y',y(1.5))
-          .text("Start here!");
+          .text("Start here!")
+          .attr('opacity',0.7);
           
     
           
@@ -229,8 +231,8 @@ d3.csv('data/rd_dataset1.csv',function(error,data){
         
     doneButton.disabled=true;
    if(d3.select('.user-point').empty()){
-     d3.selectAll(".start-point").attr("opacity",1);
-     d3.selectAll("#start-reminder").attr("opacity",1);
+     d3.selectAll(".start-point").attr("opacity",0.7);
+     d3.selectAll("#start-reminder").attr("opacity",0.7);
    }
    
    
@@ -254,8 +256,8 @@ d3.csv('data/rd_dataset1.csv',function(error,data){
         .attr("cx", function (d) { return x(d.x); } )
         .attr("cy", function (d) { return y(d.y); } )
         .attr("r", 5)
-        .attr("opacity",1)
-        .style("fill", "none")
+        .attr("opacity",0.7)
+        .style("fill", "#00A454")
         .style("stroke","#00a454");
         
       d3.selectAll('.user-point').style('opacity',0.3);
@@ -268,6 +270,7 @@ d3.csv('data/rd_dataset1.csv',function(error,data){
           .attr("fill", "none")
           .attr("stroke", "#00a454")
           .attr("stroke-width", 3)
+          .attr("opacity",0.7)
           .attr("d", d3.line()
             .x(function(d) { return x(d.x) })
             .y(function(d) { return y(d.yhat_1) })
@@ -312,8 +315,8 @@ d3.csv('data/rd_dataset1.csv',function(error,data){
    
   // Start Over button 
    $("#nul").click(function(){
-    d3.selectAll('#start-reminder').attr('opacity',1);
-    d3.selectAll('.start-point').attr('opacity',1);
+    d3.selectAll('#start-reminder').attr('opacity',0.7);
+    d3.selectAll('.start-point').attr('opacity',0.7);
     var dots=d3.selectAll(".my-dots");
     var userDots=d3.selectAll('.user-point');
     var userLines=d3.selectAll('.user-line');
