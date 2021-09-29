@@ -117,8 +117,8 @@ d3.csv('data/rd_dataset1.csv',function(error,data){
           .attr("fill", "none")
           .attr("stroke", "#737373")
           .attr('stroke-dasharray','4')
-          .attr("stroke-width", 3)
-          .attr("opacity",0.7)
+          .attr("stroke-width",4 )
+          .attr("opacity",0.9)
           .attr("d", d3.line()
             .x(function(d) { return x(d.x) })
             .y(function(d) { return y(d.ydraw) })
@@ -255,8 +255,8 @@ function clamp(a, b, c){ return Math.max(a, Math.min(b, c)) }
         .style("fill", "#00A454")
         .style("stroke","#00a454");
 
-      d3.selectAll('.user-point').style('opacity',0.3);
-      d3.selectAll('.user-line').style('opacity',0.3);
+     // d3.selectAll('.user-point').style('opacity',0.3);
+      d3.selectAll('.draw-line').style('opacity',0.3);
 
 
     canvas.append("path")
