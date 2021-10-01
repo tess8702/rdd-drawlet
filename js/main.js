@@ -144,6 +144,9 @@ svg.call(drag);
 
 function clamp(a, b, c){ return Math.max(a, Math.min(b, c)) }
 
+
+// input boxes
+
     svg.append("g")
        .attr("transform","translate("+margin.left+","+(drawHeight+margin.top)+")")
        .attr("class","x-axis")
